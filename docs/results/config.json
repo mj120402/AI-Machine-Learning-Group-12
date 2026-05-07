@@ -1,0 +1,22 @@
+{
+  "architecture": "research_cnn",
+  "batch_size": 64,
+  "cutout_augmentation": false,
+  "epochs": 45,
+  "label_smoothing": 0.0,
+  "learning_rate": 0.001,
+  "no_plots": false,
+  "noise_augmentation": false,
+  "output_dir": "artifacts_cnn_45",
+  "requested_epochs": 45,
+  "robustness_samples": 1000,
+  "seed": 42,
+  "skip_gradcam": false,
+  "skip_robustness": false,
+  "smoke_test": false,
+  "smoke_test_size": 1000,
+  "smoke_train_size": 5000,
+  "smoke_val_size": 1000,
+  "strong_augmentation": true,
+  "validation_fraction": 0.1
+}

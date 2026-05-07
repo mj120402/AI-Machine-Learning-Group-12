@@ -1,0 +1,58 @@
+{
+  "results": [
+    {
+      "accuracy": 0.40400001406669617,
+      "corruption": "gaussian_noise_0.05",
+      "description": "Gaussian pixel noise with severity 0.05",
+      "loss": 2.423746109008789
+    },
+    {
+      "accuracy": 0.8169999718666077,
+      "corruption": "brightness_shift_0.05",
+      "description": "Brightness shift with severity 0.05",
+      "loss": 0.6415737867355347
+    },
+    {
+      "accuracy": 0.7360000014305115,
+      "corruption": "center_occlusion_0.05",
+      "description": "Central square occlusion with severity 0.05",
+      "loss": 0.9131746292114258
+    },
+    {
+      "accuracy": 0.19699999690055847,
+      "corruption": "gaussian_noise_0.15",
+      "description": "Gaussian pixel noise with severity 0.15",
+      "loss": 3.8812623023986816
+    },
+    {
+      "accuracy": 0.8090000152587891,
+      "corruption": "brightness_shift_0.15",
+      "description": "Brightness shift with severity 0.15",
+      "loss": 0.6728458404541016
+    },
+    {
+      "accuracy": 0.5899999737739563,
+      "corruption": "center_occlusion_0.15",
+      "description": "Central square occlusion with severity 0.15",
+      "loss": 1.2948358058929443
+    },
+    {
+      "accuracy": 0.13600000739097595,
+      "corruption": "gaussian_noise_0.30",
+      "description": "Gaussian pixel noise with severity 0.30",
+      "loss": 4.583250999450684
+    },
+    {
+      "accuracy": 0.7820000052452087,
+      "corruption": "brightness_shift_0.30",
+      "description": "Brightness shift with severity 0.30",
+      "loss": 0.7990834712982178
+    },
+    {
+      "accuracy": 0.32899999618530273,
+      "corruption": "center_occlusion_0.30",
+      "description": "Central square occlusion with severity 0.30",
+      "loss": 2.578284740447998
+    }
+  ]
+}
