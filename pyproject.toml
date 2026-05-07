@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cifar10-research-lab"
+version = "2.0.0"
+description = "Research-friendly CIFAR-10 CNN training, validation, visualization, and robustness analysis."
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+  "tensorflow>=2.16,<2.18",
+  "numpy>=1.26,<3",
+  "matplotlib>=3.8,<4",
+]
+
+[project.scripts]
+cifar10-research-lab = "cifar10_research_lab.train:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

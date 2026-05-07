@@ -1,0 +1,10 @@
+.venv/
+.venv311/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+artifacts*/
+*_train.*.log
+*.weights.h5
