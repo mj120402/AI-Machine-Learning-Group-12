@@ -32,6 +32,7 @@ accuracy from `0.7936` to `0.8134`.
 - `config.json`: exact reproducible run configuration.
 - `plots/training_curves.png`: train/validation accuracy and loss curves.
 - `plots/confusion_matrix.png`: class-level confusion matrix.
+- `plots/per_class_accuracy.png`: per-class accuracy bar chart.
 - `plots/prediction_examples.png`: example predictions with confidence.
 - `plots/robustness.png`: accuracy under image corruptions.
 - `plots/gradcam_examples.png`: Grad-CAM interpretability examples.

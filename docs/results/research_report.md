@@ -63,6 +63,7 @@ How well does the selected CNN architecture generalize on CIFAR-10, and how does
 - report_markdown: `docs/results/research_report.md`
 - history_plot: `docs/results/plots/training_curves.png`
 - confusion_matrix_plot: `docs/results/plots/confusion_matrix.png`
+- per_class_accuracy_plot: `docs/results/plots/per_class_accuracy.png`
 - prediction_grid: `docs/results/plots/prediction_examples.png`
 - robustness_plot: `docs/results/plots/robustness.png`
 - gradcam_grid: `docs/results/plots/gradcam_examples.png`

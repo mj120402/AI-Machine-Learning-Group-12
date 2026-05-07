@@ -166,6 +166,7 @@ Each run writes artifacts into the chosen output directory, usually `artifacts/`
 - `checkpoints/<architecture>_best.weights.h5`: best validation checkpoint.
 - `plots/training_curves.png`
 - `plots/confusion_matrix.png`
+- `plots/per_class_accuracy.png`
 - `plots/prediction_examples.png`
 - `plots/robustness.png`
 - `plots/gradcam_examples.png`

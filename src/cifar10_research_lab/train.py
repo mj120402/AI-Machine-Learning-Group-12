@@ -17,6 +17,7 @@ from .robustness import evaluate_robustness
 from .visualization import (
     save_confusion_matrix_plot,
     save_history_plot,
+    save_per_class_accuracy_plot,
     save_prediction_grid,
     save_robustness_plot,
 )
@@ -102,6 +103,7 @@ def _artifact_paths(config, checkpoint_path: Path) -> dict[str, Path]:
         "report_markdown": config.output_dir / "research_report.md",
         "history_plot": config.output_dir / "plots" / "training_curves.png",
         "confusion_matrix_plot": config.output_dir / "plots" / "confusion_matrix.png",
+        "per_class_accuracy_plot": config.output_dir / "plots" / "per_class_accuracy.png",
         "prediction_grid": config.output_dir / "plots" / "prediction_examples.png",
         "robustness_plot": config.output_dir / "plots" / "robustness.png",
         "gradcam_grid": config.output_dir / "plots" / "gradcam_examples.png",
@@ -166,6 +168,7 @@ def run_experiment(config):
     if not config.no_plots:
         save_history_plot(history, paths["history_plot"])
         save_confusion_matrix_plot(matrix, data.class_names, paths["confusion_matrix_plot"])
+        save_per_class_accuracy_plot(per_class, paths["per_class_accuracy_plot"])
         save_prediction_grid(
             data.x_test,
             true_labels,

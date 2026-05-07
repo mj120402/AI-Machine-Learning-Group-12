@@ -70,6 +70,30 @@ def save_confusion_matrix_plot(matrix: Sequence[Sequence[int]], class_names: Seq
     plt.close()
 
 
+def save_per_class_accuracy_plot(per_class_accuracy: Mapping[str, Mapping[str, object]], path: Path) -> None:
+    plt = _prepare_matplotlib()
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    class_names = list(per_class_accuracy.keys())
+    accuracies = [float(values["accuracy"]) * 100 for values in per_class_accuracy.values()]
+    colors = ["#4c78a8" if value >= 80 else "#f58518" if value >= 70 else "#e45756" for value in accuracies]
+
+    plt.figure(figsize=(9, 4.8))
+    plt.bar(class_names, accuracies, color=colors)
+    plt.ylim(0, 100)
+    plt.ylabel("Accuracy (%)")
+    plt.title("Per-Class Accuracy on CIFAR-10 Test Set")
+    plt.grid(axis="y", alpha=0.25)
+    plt.xticks(rotation=35, ha="right")
+
+    for index, value in enumerate(accuracies):
+        plt.text(index, value + 1.2, f"{value:.1f}%", ha="center", va="bottom", fontsize=8)
+
+    plt.tight_layout()
+    plt.savefig(path, dpi=160)
+    plt.close()
+
+
 def save_prediction_grid(
     images,
     true_labels: Sequence[int],
