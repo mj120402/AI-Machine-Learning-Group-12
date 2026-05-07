@@ -1,6 +1,6 @@
 # Coursework Research Guide
 
-## Suggested Title
+## Working Title
 
 Robust and Interpretable CIFAR-10 Image Classification with Convolutional
 Neural Networks
@@ -42,7 +42,7 @@ Use the same train/validation/test split, random seed, batch size, and epoch
 budget for each experiment. Save the best checkpoint by validation accuracy,
 then evaluate that checkpoint on the test set.
 
-Recommended runs:
+The main experiment commands are:
 
 ```powershell
 .\.venv311\Scripts\python .\cifar10_cnn.py --architecture research_cnn --epochs 30 --strong-augmentation --output-dir artifacts_cnn
@@ -72,37 +72,42 @@ at epoch 45, more training may still improve accuracy slightly, but the gains
 are likely to be incremental. A larger jump would probably require a better
 architecture, stronger augmentation such as MixUp/CutMix, or more compute.
 
-## What To Include In The Report
+## Report Narrative
 
 ### Model Design
 
-Explain the architecture choices: convolutional layers for spatial features,
-batch normalisation for stable training, dropout for regularisation, global
-average pooling to reduce parameters, and residual connections for the
-comparison model. The `wide_cnn` model tests whether extra feature channels
-improve accuracy, while the longer `research_cnn` run tests whether the same
-model simply needed more fine-tuning after the learning-rate reductions.
+The model-design section explains the architecture choices: convolutional layers
+for spatial features, batch normalisation for stable training, dropout for
+regularisation, global average pooling to reduce parameters, and residual
+connections for the comparison model. The `wide_cnn` model tests whether extra
+feature channels improve accuracy, while the longer `research_cnn` run tests
+whether the same model simply needed more fine-tuning after the learning-rate
+reductions.
 
 ### Training And Validation
 
-Use `training_curves.png` to discuss convergence. If validation accuracy stops
-improving while training accuracy continues to rise, discuss overfitting. If
-both curves improve together, discuss healthy generalisation.
+The training discussion uses `training_curves.png` to explain convergence. If
+validation accuracy stops improving while training accuracy continues to rise,
+that points to overfitting. If both curves improve together, that supports
+healthy generalisation.
 
 ### Final Metrics
 
-Use `metrics.json` or the `=== REPORT METRICS ===` console block. Report final
-test accuracy and loss from the best validation checkpoint.
+The final metrics come from `metrics.json` or the `=== REPORT METRICS ===`
+console block. The reported test accuracy and loss are taken from the best
+validation checkpoint.
 
 ### Error Analysis
 
-Use `confusion_matrix.png` and `per_class_accuracy.json`. Identify the classes
-with the lowest accuracy and explain why they may be difficult.
+The error analysis uses `confusion_matrix.png` and `per_class_accuracy.json`.
+The most important classes to discuss are the ones with the lowest accuracy,
+because they show where the classifier struggles most.
 
 ### Robustness
 
-Use `robustness.png` and `robustness.json`. Discuss which corruption causes the
-largest accuracy drop and what this suggests about the model.
+The robustness section uses `robustness.png` and `robustness.json` to show which
+corruptions cause the largest accuracy drops and what that suggests about the
+model.
 
 The `artifacts_cnn_robust` run is designed to test whether training with mild
 Gaussian noise and label smoothing improves noise robustness without losing too
@@ -110,8 +115,9 @@ much clean test accuracy.
 
 ### Interpretability
 
-Use `gradcam_examples.png`. Choose a few correct and incorrect predictions, then
-explain whether the heatmap supports or challenges the predicted class.
+The interpretability section uses `gradcam_examples.png`. A few correct and
+incorrect predictions can be compared to explain whether the heatmap supports or
+challenges the predicted class.
 
 ## Limitations
 

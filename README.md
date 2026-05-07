@@ -13,14 +13,16 @@ The core question is:
 > robustness, and interpretability analysis tell us about its mistakes?
 
 That gives the coursework more substance than simply reporting one final test
-accuracy. The project can now support a clear discussion of model design,
-training behaviour, failure modes, and practical reliability.
+accuracy. The project supports a clear discussion of model design, training
+behaviour, failure modes, and practical reliability.
 
 ## Best Observed Result
 
-The best run so far is the 45-epoch `research_cnn` run in `artifacts_cnn_45`.
-It used the same architecture as the 30-epoch baseline, but gave the learning
-rate scheduler more time to fine-tune the model.
+The best run so far is the 45-epoch `research_cnn` experiment. The curated
+output for that run is saved in `docs/results` so the coursework evidence is
+included when the repository is zipped. It used the same architecture as the
+30-epoch baseline, but gave the learning-rate scheduler more time to fine-tune
+the model.
 
 | Run | Best validation accuracy | Test accuracy | Test loss | Best epoch |
 | --- | ---: | ---: | ---: | ---: |
@@ -36,7 +38,7 @@ additional augmentation methods rather than just many more epochs.
 
 ## What Is Included
 
-- Two architectures:
+- Three architectures:
   - `research_cnn`: a compact custom CNN with batch normalisation, dropout,
     global average pooling, and optional stronger augmentation.
   - `wide_cnn`: a higher-capacity VGG-style CNN for testing whether a wider
@@ -170,7 +172,7 @@ Each run writes artifacts into the chosen output directory, usually `artifacts/`
 
 ## Validation Strategy
 
-For coursework, the strongest validation story is:
+The validation strategy for the coursework is:
 
 1. Use validation accuracy for checkpoint selection.
 2. Keep test accuracy for final unseen-data evaluation.

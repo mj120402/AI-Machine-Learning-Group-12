@@ -54,20 +54,23 @@ How well does the selected CNN architecture generalize on CIFAR-10, and how does
 - brightness_shift_0.30: accuracy `0.7820`, loss `0.7991`
 - center_occlusion_0.30: accuracy `0.3290`, loss `2.5783`
 
-## Saved Artifacts
+## Saved Artifacts In This Repository
 
-- checkpoint: `artifacts_cnn_45\checkpoints\research_cnn_best.weights.h5`
-- metrics_json: `artifacts_cnn_45\metrics.json`
-- per_class_json: `artifacts_cnn_45\per_class_accuracy.json`
-- confusion_matrix_json: `artifacts_cnn_45\confusion_matrix.json`
-- robustness_json: `artifacts_cnn_45\robustness.json`
-- report_markdown: `artifacts_cnn_45\research_report.md`
-- history_plot: `artifacts_cnn_45\plots\training_curves.png`
-- confusion_matrix_plot: `artifacts_cnn_45\plots\confusion_matrix.png`
-- prediction_grid: `artifacts_cnn_45\plots\prediction_examples.png`
-- robustness_plot: `artifacts_cnn_45\plots\robustness.png`
-- gradcam_grid: `artifacts_cnn_45\plots\gradcam_examples.png`
+- metrics_json: `docs/results/metrics.json`
+- per_class_json: `docs/results/per_class_accuracy.json`
+- confusion_matrix_json: `docs/results/confusion_matrix.json`
+- robustness_json: `docs/results/robustness.json`
+- report_markdown: `docs/results/research_report.md`
+- history_plot: `docs/results/plots/training_curves.png`
+- confusion_matrix_plot: `docs/results/plots/confusion_matrix.png`
+- prediction_grid: `docs/results/plots/prediction_examples.png`
+- robustness_plot: `docs/results/plots/robustness.png`
+- gradcam_grid: `docs/results/plots/gradcam_examples.png`
 
-## How To Explain This In Coursework
+The best model checkpoint is intentionally excluded from the final repository
+bundle because it is a generated training file. The configuration and source
+code can regenerate it.
 
-Use the training curves to discuss convergence and overfitting, the confusion matrix to discuss class-level failure modes, robustness results to test whether the model relies on fragile image cues, and Grad-CAM examples to connect model decisions back to image regions.
+## Coursework Interpretation
+
+The training curves support the convergence and overfitting discussion, the confusion matrix shows class-level failure modes, the robustness results test whether the model relies on fragile image cues, and the Grad-CAM examples connect model decisions back to image regions.

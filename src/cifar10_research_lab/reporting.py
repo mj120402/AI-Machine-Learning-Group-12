@@ -141,13 +141,13 @@ def format_markdown_report(
     lines.extend(
         [
             "",
-            "## How To Explain This In Coursework",
+            "## Coursework Interpretation",
             "",
             (
-                "Use the training curves to discuss convergence and overfitting, the "
-                "confusion matrix to discuss class-level failure modes, robustness "
-                "results to test whether the model relies on fragile image cues, and "
-                "Grad-CAM examples to connect model decisions back to image regions."
+                "The training curves support the convergence and overfitting discussion, "
+                "the confusion matrix shows class-level failure modes, the robustness "
+                "results test whether the model relies on fragile image cues, and the "
+                "Grad-CAM examples connect model decisions back to image regions."
             ),
             "",
         ]
